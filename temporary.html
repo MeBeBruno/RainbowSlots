@@ -298,14 +298,14 @@
 			let statusString;
 			
 			if (profitBigInteger > 0n) {
-				messageString = '+' + formatCurrencyBigInteger(profitBigInteger) + ' Bucks';
+				messageString = '+' + formatCurrencyBigInteger(profitBigInteger) + ' Tauben';
 				statusString = 'win';
 			} else if (profitBigInteger < 0n) {
 				const absoluteProfitBigInteger = -profitBigInteger;
-				messageString = '-' + formatCurrencyBigInteger(absoluteProfitBigInteger) + ' Bucks';
+				messageString = '-' + formatCurrencyBigInteger(absoluteProfitBigInteger) + ' Tauben';
 				statusString = 'loss';
 			} else {
-				messageString = '±0 Bucks';
+				messageString = '±0 Tauben';
 				statusString = 'neutral';
 			}
 			
