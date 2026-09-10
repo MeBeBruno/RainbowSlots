@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<title>Rainbow Slots</title>
+	<link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMTITAUd0AAAAuGVYSWZJSSoACAAAAAUAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAMQECABEAAABaAAAAaYcEAAEAAABsAAAAAAAAAGAAAAABAAAAYAAAAAEAAABQYWludC5ORVQgNS4xLjEyAAADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlgAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAADZp5qVybcLXwAAB+hJREFUWEftl/urZWUZxz/v+67Lvu999jlnzpn7jJoTmmNeiDGyon5KQpBJBcOyKCusDFFRogsqRoWlYJqJFKNUIlYOFYagBlkihmOKo4I4eGbGGWfmXPbZl7Xeaz+svfecOY32B9TDfliw9rve7/d9nu/zPGvB/7qJ1TdOZvfffs10tdH6SBQn50mpNkopogCBEI465163On9+/xsv/+vGO3dnq5/9b/aeBO677WuTrck1N6WVypWlUmUmSUuoKEbI4rHgPc5ajM7Js8GreTb4dXdp/v4v3HDnodV7vZu9K4Fdd964o1ZvPlRrTpxab7ap1BokpTJKxQgh8N7hrMHoDGs0WucMel36y0uH+93l71721e//YvWeJ7OTEtj10xsvaLTaj09MzzYmpmep1JpEcYoUsngiBAIQhiTyvI/VGc458kGfzuI83aWFB/e9uufq6378yHumRa2+cf/t10y3Jqf/3J5ZNzu1diPVWgulYgBCCEP3EAIQEEIgpSKEgADiJCUplRBSnl2uNc/dsa39u78884pdjTMyufpGoz19W701eUprcoa0VCGEgPcO7x0hjNwX7j0EjwCUUiilkEqRpmVa7Wla7emLNm8754HVGCvthAjs+skN2+ut9r3t6RlVrbcASbA5wRmQEiElIngoEkBRCAGCLyIgBJFSCCmIohgVx3hnz7r4kx/qPPLHp59diTWyEyJQqdWvrtYacZSUCIMF0neepT73W+pv/JL49cfwx+YIFBpgRRoQIJVCSMne19/kiSf/wYsvv0ocJzQnpqjWm7c+dNdNZ6zEGtmYwPazz/lGN7NXlWsNSq7DbHqIdWsypqcDU+0es+mLNPfdQ9j/EiiJlBKpFEoWnsQJe17ay5+e/CeHO56v3HwXz7/wEpVajVpzolqtN247EbowCXD55Zetn5xs/6Cb2WolcmxcV6c1M0mURKAERAlRuc7EZJXGwQdh/gAqTou8RxFKRQgpefa5PRxa6LKYeTpZzPMvvIKQikqtTrlav+Q3d3/7Yycl8PBzB5On/m5CvV5n3dpJGpNtICOEHLAgJAGBkBGNuiR+628IEVAqQiqFVJIoSti0ZSu7H97Nz554DRamWb/5FKIoIopjKvUGabl67WoChQgX3+p85+ardl543ta1W0/bgAiLoI9CfgRMF7wH58B5JAK7NIdbcwFRtYEYt5LAli1bqUyvZ4k6V+w8n8suugAVDH5YKXmWbf3Uhdsf/f3jzxwdEZAAd9z8pdqO08tTW7a0UaoHbpFgO+B6o3WFhQAIEuahO4+KIqQqqsP7QLUc8a0vXswfbrmc6z73CWqpwDmHAKIoplSpltJy9dKVWxYilNW1k+3STLMlCO4YwS6AXQCvh4oP4IfK94FIBUTePaGRCkHRkvtLRK5D3pvHmBwhijVCStJSmThJLzl3RflLgKkm69euS9JIdsAcLcJvugWoD+A9Ao8EnHV0OgNyF3DO4l3RkEIIAPjgsa5oVoy7ZwEWxwlxkp517R3Xn3kCgQ+8T8xONDTBvEPIDoNeQHiHJKAI4BzLiwP27Ztnbm4RayWq0sRZi/MO7z3eryAybtmB4dQghIBUkjhNoyhJPn4CgTUT5sMluYjIDyPNEhjDYHnAof3z7H3xAHuee4uDcws0qzGbZiJUYzs0pnDW4J3FuxNJ+CGRYj4I4qREFKeAIIpjhFRjAmrXpzckmz44+0NFPr18ZJ7D+45w8I13OHZgAW8Mk62UTRvqzLRTYt9jaWFA97TPI1uzBO+KWRHcGLgAP05GSIVSESCwRmO0ptfppGfOygf++sI+I6+8cL+dmwv73nwtp3vMUi1FbNpU5/RtLTZvKFNLDXq5w/yRnLezM1h4/3UwexrOapyzQ3c4Vwyswo9HwhqNtQZjcpwbDkUhN0ytP3UzIxnf96Mb7l63ft01U+0mqfQon6NCITohJEGVoNxCVJuoKEEUEwEhxFh8xanDEHiUkiEx53DeYY1hMOhz5O2DHDt88DNf/97PHy3K0OvYGEvmFXnUIK+sJatvImttJZ84BdvagC/XCSGMT+6dO+G6EmgEfjwNEikVzjmstQTAwxmMRGitFdYajNYYneOtIThDsIZgNd4avLWF6ofhds7i7HHwUQrG7w/O451DCEkcl5AqQagYa+yQWNh2nICxFW0KAlprjDG4UQiHeXXODjdeSWR4tUUkpIqJ4xQpI5wvShQhsK54cfXOY6zBOo/zfvOYgDFGGq3JdY7OCzdaD8Pqx6U2PukYvPCiDF2RTe+LEA8jkA365FmGNoZ+r0ue5VhrsNbOfnPnOZUhAT0YLcx1Tp7n5HmG1jnWWZwbCeo46PFUOJy3WGvIsh46z8izHs5ZtNb0+z0WF46yOH+EztICeZ6RZxnW2nZtYqasAD56/rZaCGEnQhCGXatQc3EtlB6K36jDjf5bUXLOaHSeobVG5zlZlhU+6NPvden3e/S6y/SWO9g8e/KWex57YDxNbrn20i+npcpn03J5Y5qW2kmaVpMkieMkIY5ioigavnwohJAUM0aM26z3fhwRay3WGLTOrdFaG2MynefdXOcLOssOWKOftkbff+u9jy3+x3fB9VfsqDan1rfScmUiSdJGHMd1FUXVSEUlFUUlKUUkpEQIgaDoA4FgvXOZc8547zNn7cBa2zNG943Oe/lg0O0uL/R2/+qp/l4oxPJ/G9q/ATJIK22hBUc2AAAAAElFTkSuQmCC">
+	<style>
+		:root {
+			--space-1: 0.5rem;
+			--space-2: 1rem;
+			--space-3: 1.5rem;
+			--space-4: 2rem;
+			
+			--lightness-base: 0.75;
+			--chroma-base: 0.15;
+			--hue-yellow: 110;
+		}
+		body {
+			margin: 0;
+			padding: var(--space-2);
+			display: grid;
+			place-items: center;
+			min-height: 100vh;
+			font-family: system-ui, sans-serif;
+			font-size: 1rem;
+			background-color: #f2f2f2;
+			color: #1a1a1a;
+		}
+		main {
+			display: grid;
+			gap: var(--space-4);
+			width: 100%;
+			max-width: 40rem;
+			text-align: center;
+		}
+		h1 {
+			margin: 0;
+			font-size: 2rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: var(--space-1);
+		}
+		figure {
+			position: relative;
+			margin: 0;
+			height: 8rem;
+			border-radius: var(--space-1);
+			overflow: hidden;
+            border: 0.25rem solid #000000;
+		}
+		canvas {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+		figure::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background-image: linear-gradient(
+				to right,
+				#000000d9 0%,
+				#00000000 25%,
+				#00000000 75%,
+				#000000d9 100%
+			);
+			pointer-events: none;
+			z-index: 1;
+		}
+		figure::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 0;
+			bottom: 0;
+			width: 0.25rem;
+			transform: translateX(-50%);
+			background-color: #000000;
+			z-index: 2;
+		}
+		fieldset {
+			display: flex;
+			flex-wrap: wrap;
+			gap: var(--space-2);
+			justify-content: center;
+			align-items: center;
+			border: none;
+			padding: 0;
+			margin: 0;
+		}
+		input, button {
+			padding: var(--space-1) var(--space-2);
+			font-size: 1.5rem;
+			border-radius: var(--space-1);
+			font-family: inherit;
+		}
+		input {
+			width: 10rem;
+			text-align: center;
+			background-color: #ffffff;
+			color: #1a1a1a;
+			border: 0.1rem solid #cccccc;
+		}
+		button {
+			cursor: pointer;
+			font-weight: bold;
+			border: none;
+			transition: opacity 0.2s;
+			background-color: #cccccc;
+			color: #000000;
+		}
+		button:disabled, input:disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+		output {
+			font-size: 2rem;
+			font-weight: bold;
+			min-height: 3rem;
+		}
+		output[data-status='win'] {
+			color: #22aa22;
+		}
+		output[data-status='loss'] {
+			color: #dd3333;
+		}
+		output[data-status='neutral'] {
+			color: inherit;
+		}
+		#taubenBucks {
+			height: 2rem;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			body {
+				background-color: #111111;
+				color: #e6e6e6;
+			}
+			figure::after {
+				background-color: #ffffff;
+			}
+			input {
+				background-color: #333333;
+				color: #e6e6e6;
+				border-color: #4d4d4d;
+			}
+			button {
+				background-color: #404040;
+				color: #ffffff;
+			}
+			output[data-status='win'] {
+				color: #55ff55;
+			}
+			output[data-status='loss'] {
+				color: #ff5555;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1><span id="balance-display"></span><img id="taubenBucks" alt="Taube" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMTITAUd0AAAAuGVYSWZJSSoACAAAAAUAGgEFAAEAAABKAAAAGwEFAAEAAABSAAAAKAEDAAEAAAACAAAAMQECABEAAABaAAAAaYcEAAEAAABsAAAAAAAAAGAAAAABAAAAYAAAAAEAAABQYWludC5ORVQgNS4xLjEyAAADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlgAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAADZp5qVybcLXwAAB+hJREFUWEftl/urZWUZxz/v+67Lvu999jlnzpn7jJoTmmNeiDGyon5KQpBJBcOyKCusDFFRogsqRoWlYJqJFKNUIlYOFYagBlkihmOKo4I4eGbGGWfmXPbZl7Xeaz+svfecOY32B9TDfliw9rve7/d9nu/zPGvB/7qJ1TdOZvfffs10tdH6SBQn50mpNkopogCBEI465163On9+/xsv/+vGO3dnq5/9b/aeBO677WuTrck1N6WVypWlUmUmSUuoKEbI4rHgPc5ajM7Js8GreTb4dXdp/v4v3HDnodV7vZu9K4Fdd964o1ZvPlRrTpxab7ap1BokpTJKxQgh8N7hrMHoDGs0WucMel36y0uH+93l71721e//YvWeJ7OTEtj10xsvaLTaj09MzzYmpmep1JpEcYoUsngiBAIQhiTyvI/VGc458kGfzuI83aWFB/e9uufq6378yHumRa2+cf/t10y3Jqf/3J5ZNzu1diPVWgulYgBCCEP3EAIQEEIgpSKEgADiJCUplRBSnl2uNc/dsa39u78884pdjTMyufpGoz19W701eUprcoa0VCGEgPcO7x0hjNwX7j0EjwCUUiilkEqRpmVa7Wla7emLNm8754HVGCvthAjs+skN2+ut9r3t6RlVrbcASbA5wRmQEiElIngoEkBRCAGCLyIgBJFSCCmIohgVx3hnz7r4kx/qPPLHp59diTWyEyJQqdWvrtYacZSUCIMF0neepT73W+pv/JL49cfwx+YIFBpgRRoQIJVCSMne19/kiSf/wYsvv0ocJzQnpqjWm7c+dNdNZ6zEGtmYwPazz/lGN7NXlWsNSq7DbHqIdWsypqcDU+0es+mLNPfdQ9j/EiiJlBKpFEoWnsQJe17ay5+e/CeHO56v3HwXz7/wEpVajVpzolqtN247EbowCXD55Zetn5xs/6Cb2WolcmxcV6c1M0mURKAERAlRuc7EZJXGwQdh/gAqTou8RxFKRQgpefa5PRxa6LKYeTpZzPMvvIKQikqtTrlav+Q3d3/7Yycl8PBzB5On/m5CvV5n3dpJGpNtICOEHLAgJAGBkBGNuiR+628IEVAqQiqFVJIoSti0ZSu7H97Nz554DRamWb/5FKIoIopjKvUGabl67WoChQgX3+p85+ardl543ta1W0/bgAiLoI9CfgRMF7wH58B5JAK7NIdbcwFRtYEYt5LAli1bqUyvZ4k6V+w8n8suugAVDH5YKXmWbf3Uhdsf/f3jzxwdEZAAd9z8pdqO08tTW7a0UaoHbpFgO+B6o3WFhQAIEuahO4+KIqQqqsP7QLUc8a0vXswfbrmc6z73CWqpwDmHAKIoplSpltJy9dKVWxYilNW1k+3STLMlCO4YwS6AXQCvh4oP4IfK94FIBUTePaGRCkHRkvtLRK5D3pvHmBwhijVCStJSmThJLzl3RflLgKkm69euS9JIdsAcLcJvugWoD+A9Ao8EnHV0OgNyF3DO4l3RkEIIAPjgsa5oVoy7ZwEWxwlxkp517R3Xn3kCgQ+8T8xONDTBvEPIDoNeQHiHJKAI4BzLiwP27Ztnbm4RayWq0sRZi/MO7z3eryAybtmB4dQghIBUkjhNoyhJPn4CgTUT5sMluYjIDyPNEhjDYHnAof3z7H3xAHuee4uDcws0qzGbZiJUYzs0pnDW4J3FuxNJ+CGRYj4I4qREFKeAIIpjhFRjAmrXpzckmz44+0NFPr18ZJ7D+45w8I13OHZgAW8Mk62UTRvqzLRTYt9jaWFA97TPI1uzBO+KWRHcGLgAP05GSIVSESCwRmO0ptfppGfOygf++sI+I6+8cL+dmwv73nwtp3vMUi1FbNpU5/RtLTZvKFNLDXq5w/yRnLezM1h4/3UwexrOapyzQ3c4Vwyswo9HwhqNtQZjcpwbDkUhN0ytP3UzIxnf96Mb7l63ft01U+0mqfQon6NCITohJEGVoNxCVJuoKEEUEwEhxFh8xanDEHiUkiEx53DeYY1hMOhz5O2DHDt88DNf/97PHy3K0OvYGEvmFXnUIK+sJatvImttJZ84BdvagC/XCSGMT+6dO+G6EmgEfjwNEikVzjmstQTAwxmMRGitFdYajNYYneOtIThDsIZgNd4avLWF6ofhds7i7HHwUQrG7w/O451DCEkcl5AqQagYa+yQWNh2nICxFW0KAlprjDG4UQiHeXXODjdeSWR4tUUkpIqJ4xQpI5wvShQhsK54cfXOY6zBOo/zfvOYgDFGGq3JdY7OCzdaD8Pqx6U2PukYvPCiDF2RTe+LEA8jkA365FmGNoZ+r0ue5VhrsNbOfnPnOZUhAT0YLcx1Tp7n5HmG1jnWWZwbCeo46PFUOJy3WGvIsh46z8izHs5ZtNb0+z0WF46yOH+EztICeZ6RZxnW2nZtYqasAD56/rZaCGEnQhCGXatQc3EtlB6K36jDjf5bUXLOaHSeobVG5zlZlhU+6NPvden3e/S6y/SWO9g8e/KWex57YDxNbrn20i+npcpn03J5Y5qW2kmaVpMkieMkIY5ioigavnwohJAUM0aM26z3fhwRay3WGLTOrdFaG2MynefdXOcLOssOWKOftkbff+u9jy3+x3fB9VfsqDan1rfScmUiSdJGHMd1FUXVSEUlFUUlKUUkpEQIgaDoA4FgvXOZc8547zNn7cBa2zNG943Oe/lg0O0uL/R2/+qp/l4oxPJ/G9q/ATJIK22hBUc2AAAAAElFTkSuQmCC"></h1>
+		<figure aria-label="Rainbow Slot Machine" role="img">
+			<canvas id="slot-canvas" width="1000" height="100"></canvas>
+		</figure>
+		<fieldset>
+			<label for="bet-input">Einsatz:</label>
+			<input id="bet-input" type="text" inputmode="numeric" pattern="\d+" value="10">
+			<button id="action-button" type="button">Spielen</button>
+		</fieldset>
+		<output id="result-output" data-status="neutral" aria-live="polite"></output>
+	</main>
+	<script>
+		const loadBalanceFromStorage = () => {
+			/* const storedBalanceString = localStorage.getItem('taubenBucksBalance');
+			if (storedBalanceString === null) { */
+				return 5000n;
+			/* }
+			try {
+				return BigInt(storedBalanceString);
+			} catch (errorObject) {
+				return 5000n;
+			} */
+		};
+
+		const saveBalanceToStorage = (balanceBigInteger) => {
+			/* localStorage.setItem('taubenBucksBalance', balanceBigInteger.toString()); */
+		};
+
+		const applicationState = {
+			balanceBigInteger: loadBalanceFromStorage(),
+			isSpinningBoolean: false,
+			currentOffsetHueNumber: 0,
+			optimalYellowHueBigInteger: 110n,
+			colorLightnessString: '0.75',
+			colorChromaString: '0.15'
+		};
+
+		const calculateShortestDistanceBigInteger = (currentHueBigInteger, targetHueBigInteger) => {
+			const maximumHueBigInteger = 360n;
+			let directDistanceBigInteger = currentHueBigInteger - targetHueBigInteger;
+			
+			if (directDistanceBigInteger < 0n) {
+				directDistanceBigInteger = -directDistanceBigInteger;
+			}
+			
+			const wrappedDistanceBigInteger = maximumHueBigInteger - directDistanceBigInteger;
+			
+			if (directDistanceBigInteger < wrappedDistanceBigInteger) {
+				return directDistanceBigInteger;
+			}
+			
+			return wrappedDistanceBigInteger;
+		};
+
+		const calculatePayoutBigInteger = (betBigInteger, distanceBigInteger) => {
+			const maximumDistanceBigInteger = 180n;
+			const fullCircleBigInteger = 360n;
+			const distanceMultiplierBigInteger = 2n;
+			const numeratorBigInteger = betBigInteger * (fullCircleBigInteger - (distanceMultiplierBigInteger * distanceBigInteger));
+			return numeratorBigInteger / maximumDistanceBigInteger;
+		};
+
+		const parseCurrencyString = (currencyString) => {
+			const sanitizedString = currencyString.trim();
+			if (sanitizedString === '') {
+				throw new Error('Einsatz leer.');
+			}
+			if (/^\d+$/.test(sanitizedString) === false) {
+				throw new Error('Format ungültig. Nur ganze Zahlen.');
+			}
+			const parsedBigInteger = BigInt(sanitizedString);
+			
+			if (parsedBigInteger <= 0n) {
+				throw new Error('Einsatz zu klein.');
+			}
+			return parsedBigInteger;
+		};
+
+		const formatCurrencyBigInteger = (currencyBigInteger) => {
+			return currencyBigInteger.toString();
+		};
+
+		const calculateEasing = (timeProgressNumber) => {
+			const invertedProgressNumber = 1 - timeProgressNumber;
+			return 1 - (invertedProgressNumber * invertedProgressNumber * invertedProgressNumber);
+		};
+
+		const renderRainbowToCanvas = (canvasContext, canvasWidth, canvasHeight, startOffsetHueNumber, lightnessString, chromaString) => {
+			const linearGradientObject = canvasContext.createLinearGradient(0, 0, canvasWidth, 0);
+			const totalStepsNumber = canvasWidth;
+			for (let stepIndexNumber = 0;
+			stepIndexNumber <= totalStepsNumber;
+			stepIndexNumber += 1) {
+				const stopFractionNumber = stepIndexNumber / totalStepsNumber;
+				const currentHueNumber = (startOffsetHueNumber + (stopFractionNumber * 360)) % 360;
+				linearGradientObject.addColorStop(stopFractionNumber, 'oklch(' + lightnessString + ' ' + chromaString + ' ' + String(currentHueNumber) + ')');
+			}
+			canvasContext.fillStyle = linearGradientObject;
+			canvasContext.fillRect(0, 0, canvasWidth, canvasHeight);
+			
+			const optimalHueNumber = Number(applicationState.optimalYellowHueBigInteger);
+			const hueDistanceNumber = (optimalHueNumber - startOffsetHueNumber + 360) % 360;
+			const markerPositionXNumber = (hueDistanceNumber / 360) * canvasWidth;
+			
+			canvasContext.fillStyle = 'oklch(0 0 0 / 0.3)';
+			canvasContext.fillRect(markerPositionXNumber - 2, 0, 4, canvasHeight);
+		};
+
+		const updateDisplayElements = (balanceBigInteger, resultMessageString, resultStatusString) => {
+			document.getElementById('balance-display').textContent = formatCurrencyBigInteger(balanceBigInteger);
+			const outputElement = document.getElementById('result-output');
+			outputElement.textContent = resultMessageString;
+			outputElement.setAttribute('data-status', resultStatusString);
+		};
+
+		const setInterfaceDisabledState = (isDisabledBoolean) => {
+			document.getElementById('action-button').disabled = isDisabledBoolean;
+			document.getElementById('bet-input').disabled = isDisabledBoolean;
+		};
+
+		const finalizeSpin = (finalOffsetHueNumber, finalCenterHueNumber, betBigInteger) => {
+			applicationState.currentOffsetHueNumber = finalOffsetHueNumber;
+			const canvasElement = document.getElementById('slot-canvas');
+			const canvasContext = canvasElement.getContext('2d');
+			renderRainbowToCanvas(canvasContext, canvasElement.width, canvasElement.height, applicationState.currentOffsetHueNumber, applicationState.colorLightnessString, applicationState.colorChromaString);
+			
+			const targetHueBigInteger = BigInt(finalCenterHueNumber);
+			const distanceBigInteger = calculateShortestDistanceBigInteger(targetHueBigInteger, applicationState.optimalYellowHueBigInteger);
+			const payoutBigInteger = calculatePayoutBigInteger(betBigInteger, distanceBigInteger);
+			
+			applicationState.balanceBigInteger = applicationState.balanceBigInteger + payoutBigInteger;
+			saveBalanceToStorage(applicationState.balanceBigInteger);
+			
+			const profitBigInteger = payoutBigInteger - betBigInteger;
+			let messageString;
+			let statusString;
+			
+			if (profitBigInteger > 0n) {
+				messageString = '+' + formatCurrencyBigInteger(profitBigInteger) + ' Bucks';
+				statusString = 'win';
+			} else if (profitBigInteger < 0n) {
+				const absoluteProfitBigInteger = -profitBigInteger;
+				messageString = '-' + formatCurrencyBigInteger(absoluteProfitBigInteger) + ' Bucks';
+				statusString = 'loss';
+			} else {
+				messageString = '±0 Bucks';
+				statusString = 'neutral';
+			}
+			
+			updateDisplayElements(applicationState.balanceBigInteger, messageString, statusString);
+			setInterfaceDisabledState(false);
+			applicationState.isSpinningBoolean = false;
+		};
+
+		const startAnimationLoop = (totalMovementNumber, betBigInteger, finalCenterHueNumber) => {
+			const startTimestampNumber = performance.now();
+			const durationNumber = 3000;
+			const initialOffsetHueNumber = applicationState.currentOffsetHueNumber;
+			const canvasElement = document.getElementById('slot-canvas');
+			const canvasContext = canvasElement.getContext('2d');
+			
+			const animationStep = (currentTimestampNumber) => {
+				const elapsedMilliseconds = currentTimestampNumber - startTimestampNumber;
+				const timeProgressNumber = Math.min(elapsedMilliseconds / durationNumber, 1);
+				const easedProgressNumber = calculateEasing(timeProgressNumber);
+				
+				const currentMovementNumber = totalMovementNumber * easedProgressNumber;
+				applicationState.currentOffsetHueNumber = (initialOffsetHueNumber + currentMovementNumber) % 360;
+				
+				renderRainbowToCanvas(canvasContext, canvasElement.width, canvasElement.height, applicationState.currentOffsetHueNumber, applicationState.colorLightnessString, applicationState.colorChromaString);
+				
+				if (timeProgressNumber < 1) {
+					requestAnimationFrame(animationStep);
+				} else {
+					finalizeSpin(applicationState.currentOffsetHueNumber, finalCenterHueNumber, betBigInteger);
+				}
+			};
+			
+			requestAnimationFrame(animationStep);
+		};
+
+		const handleActionClick = () => {
+			if (applicationState.isSpinningBoolean === true) {
+				return;
+			}
+			
+			if (applicationState.balanceBigInteger === 0n) {
+				updateDisplayElements(applicationState.balanceBigInteger, 'Bankrott! Bitte Seite laden.', 'loss');
+				return;
+			}
+			
+			const betInputString = document.getElementById('bet-input').value;
+			let betBigInteger;
+			
+			try {
+				betBigInteger = parseCurrencyString(betInputString);
+			} catch (errorObject) {
+				updateDisplayElements(applicationState.balanceBigInteger, errorObject.message, 'loss');
+				return;
+			}
+			
+			if (betBigInteger > applicationState.balanceBigInteger) {
+				updateDisplayElements(applicationState.balanceBigInteger, 'Einsatz zu hoch.', 'loss');
+				return;
+			}
+			
+			applicationState.balanceBigInteger = applicationState.balanceBigInteger - betBigInteger;
+			saveBalanceToStorage(applicationState.balanceBigInteger);
+			updateDisplayElements(applicationState.balanceBigInteger, 'Viel Glück...', 'neutral');
+			setInterfaceDisabledState(true);
+			applicationState.isSpinningBoolean = true;
+			
+			const randomCenterHueNumber = Math.floor(Math.random() * 360);
+			const targetOffsetHueNumber = (randomCenterHueNumber + 180) % 360;
+			
+			if (window.matchMedia('(prefers-reduced-motion: reduce)').matches === true) {
+				finalizeSpin(targetOffsetHueNumber, randomCenterHueNumber, betBigInteger);
+				return;
+			}
+			
+			const totalMovementNumber = ((targetOffsetHueNumber - applicationState.currentOffsetHueNumber + 360) % 360) + (360 * 5);
+			startAnimationLoop(totalMovementNumber, betBigInteger, randomCenterHueNumber);
+		};
+
+		const initializeApplication = () => {
+			const computedStylesObject = getComputedStyle(document.documentElement);
+			applicationState.colorLightnessString = computedStylesObject.getPropertyValue('--lightness-base').trim();
+			applicationState.colorChromaString = computedStylesObject.getPropertyValue('--chroma-base').trim();
+			applicationState.optimalYellowHueBigInteger = BigInt(computedStylesObject.getPropertyValue('--hue-yellow').trim());
+			
+			const canvasElement = document.getElementById('slot-canvas');
+			renderRainbowToCanvas(canvasElement.getContext('2d'), canvasElement.width, canvasElement.height, applicationState.currentOffsetHueNumber, applicationState.colorLightnessString, applicationState.colorChromaString);
+			
+			document.getElementById('balance-display').textContent = formatCurrencyBigInteger(applicationState.balanceBigInteger);
+			document.getElementById('action-button').addEventListener('click', handleActionClick);
+		};
+
+		initializeApplication();
+	</script>
+</body>
+</html>
